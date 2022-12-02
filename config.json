@@ -1,0 +1,16 @@
+{
+    "name":"Connector_Postgres",
+    "config":{
+        "connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
+        "tasks.max":"1",
+        "connection.url":"jdbc:postgresql://host.docker.internal:5432/kafkaproject?verifyServerCertificate=false&useSSL=true&requireSSL=true",
+        "connection.user":"postgres",
+        "connection.password":"1997",
+        "mode":"bulk",
+        "topic.prefix":"postgres_",
+        "poll.interval.ms":"100000",
+        "table.whitelist":"worldcuplayer"
+
+}
+
+}
